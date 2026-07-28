@@ -1,2 +1,1 @@
-# To-Do-list
-Creating an to do list with the REACT Library 
+A clean and responsive Todo List application built with React. It allows users to create, edit, delete, and organize tasks while persisting data using localStorage. This project demonstrates React fundamentals including components, hooks, state management, event handling, and conditional rendering.
