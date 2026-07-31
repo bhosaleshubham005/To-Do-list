@@ -12,6 +12,15 @@ function App() {
     setTask("");
   };
 
+  const deleteTodo = (indexToDelete) => {
+
+    const updateTodo = todos.filter((todo,index) => {
+      return index !== indexToDelete ;
+
+    })
+     setTodos(updateTodo);
+  };
+
   return (
     <div className="container">
       <h1>To-Do List</h1>
@@ -25,11 +34,18 @@ function App() {
         />
 
         <button onClick={addTodo}>Add</button>
+         <button onClick={deleteTodo}>Delete</button>
       </div>
 
       <ul>
         {todos.map((todo, index) => (
-          <li key={index}>{todo}</li>
+        <li key={index}>
+  {todo}
+
+  <button onClick={() => deleteTodo(index)}>
+    Delete
+  </button>
+      </li> 
         ))}
       </ul>
     </div>
